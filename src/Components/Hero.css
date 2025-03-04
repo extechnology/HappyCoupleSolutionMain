@@ -1,0 +1,136 @@
+.hero {
+
+    border-top: 3px dotted #eee !important;
+    border-bottom: 3px dotted #eee !important;
+
+}
+
+.hero-head h2 {
+
+    font-weight: 700;
+    font-size: 30px;
+    color: #2a2a2a;
+
+}
+
+.hero-head p {
+
+    margin-bottom: 0rem !important;
+    font-weight: 600;
+    color: #2a2a2a;
+
+
+}
+
+.card-color {
+
+    background-color: #c7c7c7 !important;
+
+}
+
+.card-title {
+
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+
+}
+
+.card {
+
+    border: none !important;
+    outline: none !important;
+
+}
+
+
+.card-display {
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+
+/* Responsive */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+    .card-display {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .card-display2 {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem !important;
+
+
+    }
+
+
+}
+
+
+/* Responsive */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+
+    .card-display {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .card-display2 {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem !important;
+
+
+    }
+
+
+}
+
+
+/* Responsive */
+@media only screen  and (max-width: 481px) {
+
+    .card-display {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .card-display2 {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem !important;
+
+    }
+
+    .hero-head p {
+
+        margin-bottom: 0rem !important;
+        font-weight: 600;
+        font-size: 13px;
+        color: #2a2a2a;
+
+    }
+
+
+}

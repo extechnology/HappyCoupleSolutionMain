@@ -1,0 +1,93 @@
+.stress-2 h3 {
+
+
+    font-weight: 600;
+
+
+}
+
+.stress2-img {
+
+    width: 55%;
+    margin: auto;
+
+}
+
+.stress-p p {
+
+    font-size: 14px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+.stress-3 h3 {
+
+    font-weight: 600;
+
+}
+
+
+.stress3-img {
+
+    width: 85%;
+    position: relative;
+
+}
+
+.stress3-img p {
+
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    font-weight: 700;
+    font-size: larger;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+.stress4-head h3 {
+
+    font-weight: 600;
+
+}
+
+.stress4-head p {
+
+    font-size: 14px;
+    line-height: 25px;
+    color: #2a2a2a;
+    text-align: justify;
+}
+
+.text-card p{
+
+    font-weight: 400 !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 0px;
+
+}
+
+.card{
+
+    border: none !important;
+    border-radius: 1.5rem !important;
+
+}
+
+.stress-product h3{
+
+    font-weight: 700;
+
+}
+
+.stress-product p{
+
+    margin-bottom: 0;
+    font-size: medium;
+    font-weight: 500;
+
+}

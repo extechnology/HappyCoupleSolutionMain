@@ -1,0 +1,82 @@
+.Contact-hero {
+
+    background-image: url('/BanerContact1080x250.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact {
+
+    padding: 3rem;
+
+}
+
+.Contact-hero h2 {
+
+    font-weight: 700;
+    font-size: 3rem;
+
+}
+
+.contact-form{
+
+    border-bottom: 3px dotted #eee;
+    padding: 3rem;
+
+}
+
+.get-in h3{
+
+    font-weight: 600;
+
+}
+
+
+
+
+
+
+
+/* Responsive */
+@media only screen and (max-width: 481px) {
+
+
+    .contact{
+
+        padding: 3rem 0rem 3rem 0rem;
+
+    }
+    .Contact-hero h2{
+
+        font-weight: 700;
+        font-size: 2.5rem;
+
+    }
+
+    .contact-form{
+
+        padding: 0rem;
+
+    }
+
+    .get-in p{
+
+        font-size: smaller;
+
+    }
+
+    .margin-get{
+
+        margin-top: 2rem !important; 
+        margin-bottom: 3rem;
+
+    }
+
+
+}
