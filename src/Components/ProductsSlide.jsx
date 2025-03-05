@@ -254,7 +254,7 @@ function ProductsSlide() {
 
                                                                     <span className="add-to-cart" >
 
-                                                                        <span className="txt" >Add in cart</span>
+                                                                        <span className="txt" >Book Now</span>
 
 
                                                                     </span>

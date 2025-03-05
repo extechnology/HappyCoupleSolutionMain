@@ -108,7 +108,7 @@ function Header() {
               </div>
 
 
-              <Link to={'/allproducts'} onClick={handleNavClick}>Products</Link>
+              <Link to={'/allproducts'} onClick={handleNavClick}>Treatment Plans</Link>
 
 
 

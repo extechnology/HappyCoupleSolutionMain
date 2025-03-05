@@ -56,7 +56,7 @@ function Stress() {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://www.happycouplesolution.com/Baner 1080x250 A.jpg"
+                  src="https://www.happycouplesolution.com/Baner1080x250 A.jpg"
                   alt="First slide"
                 />
               </Carousel.Item>
@@ -72,7 +72,7 @@ function Stress() {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://www.happycouplesolution.com/Baner 1080x250 C.jpg"
+                  src="https://www.happycouplesolution.com/Baner1080x250C.jpg"
                   alt="Third slide"
                 />
               </Carousel.Item>

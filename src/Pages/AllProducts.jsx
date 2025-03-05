@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { GetAllProducts, AddCart } from '../Services/AllApi';
 import { Skeleton } from '@mui/material';
 import { toast } from 'sonner';
+import CustomerJourney from '../Components/CustomerJoun';
 
 function AllProducts() {
 
@@ -135,105 +136,36 @@ function AllProducts() {
 
         <>
 
-            <section className='container p-5'>
+            <section className=''>
 
 
-                <div className='row'>
+                <CustomerJourney />
 
-
-                    {/* All Products */}
-
-
-                    {
-
-                        Loading ?
-
-
-                            Array.from({ length: 3 }).map((item) => (
-
-
-                                <div className='me-5 mt-3 col-md-3'>
-
-                                    <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
-
-                                    <Skeleton animation="wave" height={20} style={{ marginBottom: 6, marginTop: '1rem' }} />
-
-                                    <Skeleton animation="wave" height={20} width="80%" />
-
-                                </div>
-
-                            ))
-
-
-                            :
-
-
-                            ProductsData.length > 0 ?
-
-
-                                ProductsData.map((item) => (
-
-
-                                    <div className='col-md-4'>
-
-                                        <div className="container page-wrapper">
-
-                                            <div className="page-inner">
-                                                <div className="row">
-                                                    <div className="el-wrapper">
-
-
-                                                        <div className="box-up" onClick={() => { Navigate(`/pro/${item.id}`) }}>
-
-                                                            <img className="img-fluid img" src={item.image} alt="img" style={{ height: '100%' }} />
-
-                                                            <div className="img-info">
-
-                                                                <div className="info-inner">
-                                                                    <span className="p-name"></span>
-                                                                    <span className="p-company">{item.name}</span>
-
-                                                                    <div className='p-company'>
-
-                                                                        <span class="fa fa-star " style={{ color: '#FFD43B' }}></span>
-                                                                        <span class="fa fa-star" style={{ color: '#FFD43B' }}></span>
-                                                                        <span class="fa fa-star" style={{ color: '#FFD43B' }}></span>
-                                                                        <span class="fa fa-star" style={{ color: '#FFD43B' }}></span>
-                                                                        <span class="fa fa-star fa-star-half-stroke" style={{ color: '#FFD43B' }}></span>
-
-                                                                    </div>
-
-                                                                </div>
+                <div className='container p-5'>
 
 
 
-                                                                <div className="a-size"> <span style={{ fontWeight: '600', color: 'blue' }}>FOR :</span> <span className="size" style={{ fontSize: '0.8rem' }}>{item.use_for}<br />
-                                                                    <span style={{ fontWeight: '600', color: 'blue' }}> WITH :</span>{item.use_with}</span></div>
+                    <div className='row'>
 
-                                                            </div>
 
-                                                        </div>
+                        {/* All Products */}
 
-                                                        <div className="box-down">
 
-                                                            <div className="h-bg">
-                                                                <div className="h-bg-inner"></div>
-                                                            </div>
+                        {
 
-                                                            <a className="cart" onClick={() => { HandelAddCart(item) }}>
-                                                                <span className="price">Just ₹{item.price}</span>
+                            Loading ?
 
-                                                                <span className="add-to-cart" >
-                                                                    <span className="txt">Add in cart</span>
-                                                                </span>
-                                                            </a>
 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                Array.from({ length: 3 }).map((item) => (
 
-                                        </div>
+
+                                    <div className='me-5 mt-3 col-md-3'>
+
+                                        <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
+
+                                        <Skeleton animation="wave" height={20} style={{ marginBottom: 6, marginTop: '1rem' }} />
+
+                                        <Skeleton animation="wave" height={20} width="80%" />
 
                                     </div>
 
@@ -243,19 +175,95 @@ function AllProducts() {
                                 :
 
 
-                                <div className='d-flex justify-content-center'>
-
-                                    <img src="https://www.fruitomans.com/themes/home/images/no-product-found.png" className='img-fluid' alt="img" />
+                                ProductsData.length > 0 ?
 
 
-                                </div>
-
-                    }
+                                    ProductsData.map((item) => (
 
 
+                                        <div className='col-md-4'>
+
+                                            <div className="container page-wrapper">
+
+                                                <div className="page-inner">
+                                                    <div className="row">
+                                                        <div className="el-wrapper">
+
+
+                                                            <div className="box-up" onClick={() => { Navigate(`/pro/${item.id}`) }}>
+
+                                                                <img className="img-fluid img" src={item.image} alt="img" style={{ height: '100%' }} />
+
+                                                                <div className="img-info">
+
+                                                                    <div className="info-inner">
+                                                                        <span className="p-name"></span>
+                                                                        <span className="p-company">{item.name}</span>
+
+                                                                        <div className='p-company'>
+
+                                                                            <span class="fa fa-star " style={{ color: '#FFD43B' }}></span>
+                                                                            <span class="fa fa-star" style={{ color: '#FFD43B' }}></span>
+                                                                            <span class="fa fa-star" style={{ color: '#FFD43B' }}></span>
+                                                                            <span class="fa fa-star" style={{ color: '#FFD43B' }}></span>
+                                                                            <span class="fa fa-star fa-star-half-stroke" style={{ color: '#FFD43B' }}></span>
+
+                                                                        </div>
+
+                                                                    </div>
+
+
+
+                                                                    <div className="a-size"> <span style={{ fontWeight: '600', color: 'blue' }}>FOR :</span> <span className="size" style={{ fontSize: '0.8rem' }}>{item.use_for}<br />
+                                                                        <span style={{ fontWeight: '600', color: 'blue' }}> WITH :</span>{item.use_with}</span></div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div className="box-down">
+
+                                                                <div className="h-bg">
+                                                                    <div className="h-bg-inner"></div>
+                                                                </div>
+
+                                                                <a className="cart" onClick={() => { HandelAddCart(item) }}>
+                                                                    <span className="price">Just ₹{item.price}</span>
+
+                                                                    <span className="add-to-cart" >
+                                                                        <span className="txt">Book Now</span>
+                                                                    </span>
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    ))
+
+
+                                    :
+
+
+                                    <div className='d-flex justify-content-center'>
+
+                                        <img src="https://www.fruitomans.com/themes/home/images/no-product-found.png" className='img-fluid' alt="img" />
+
+
+                                    </div>
+
+                        }
+
+
+
+                    </div>
 
                 </div>
-
 
             </section>
 
