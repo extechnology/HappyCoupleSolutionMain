@@ -96,7 +96,7 @@ function Slider() {
 
                                     <div className='text-over'>
 
-                                        <h4>Find Your Doctor</h4>
+                                        <h4>Book a Consultation</h4>
 
                                     </div>
 
@@ -116,7 +116,7 @@ function Slider() {
 
                                     <div className='text-over'>
 
-                                        <h4>Self Assessment</h4>
+                                        <h4>Personalized Health Assessment </h4>
 
                                     </div>
 
@@ -133,7 +133,7 @@ function Slider() {
 
                                     <div className='text-over'>
 
-                                        <h4>Consult Now</h4>
+                                        <h4>Explore Treatment Plans</h4>
 
                                     </div>
 
@@ -152,7 +152,7 @@ function Slider() {
 
                                     <div className='text-over'>
 
-                                        <h4>Manage Stress</h4>
+                                        <h4>Manage Stress & Confidence</h4>
 
                                     </div>
 

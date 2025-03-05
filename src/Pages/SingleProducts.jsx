@@ -445,7 +445,7 @@ function SingleProducts() {
 
 
                                             {/* Quanity */}
-                                            <div className=" mb-4 mt-3">
+                                            {/* <div className=" mb-4 mt-3">
 
 
                                                 <div className="d-flex flex-column">
@@ -471,12 +471,12 @@ function SingleProducts() {
                                                 </div>
 
 
-                                            </div>
+                                            </div> */}
 
 
 
                                             {/* Buy Now */}
-                                            <a className="btn btn-buynow shadow me-3" onClick={HandleBuyNow}> Buy now </a>
+                                            <a className="btn btn-buynow shadow me-3" onClick={HandleBuyNow}>Book Now</a>
                                             <a className="btn btn-addcart shadow" onClick={HandelAddCart}> <i className="me-1 fa fa-shopping-basket" ></i> Add to cart </a>
 
 

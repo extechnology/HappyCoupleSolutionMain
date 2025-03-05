@@ -5,6 +5,7 @@ import Hero from '../Components/Hero'
 import ProductsSlide from '../Components/ProductsSlide'
 import HeroSecond from '../Components/HeroSecond'
 import WhatsApp from '../Components/WhatsApp'
+import HappyCoupleSolutions from '../Components/Home/AboutHero'
 
 function Landing() {
 
@@ -39,6 +40,13 @@ function Landing() {
         </div>
 
 
+        {/* About */}
+        <div>
+
+          <HappyCoupleSolutions />
+
+        </div>
+
 
         {/* Hero  */}
         <div className=''>
@@ -52,7 +60,7 @@ function Landing() {
         {/* Products Slide */}
         <div className=''>
 
-          <h3 className='text-center mb-0 mt-5' style={{ fontWeight: '600' }}>Products</h3>
+          <h3 className='text-center mb-0 mt-5' style={{ fontWeight: '600' }}>Treatment Plans</h3>
 
           <ProductsSlide />
 
@@ -63,14 +71,14 @@ function Landing() {
 
 
         {/* Hero 2 */}
-        <div className=''>
+        {/* <div className=''>
 
           <HeroSecond />
 
-        </div>
+        </div> */}
 
 
-        
+
 
 
 
