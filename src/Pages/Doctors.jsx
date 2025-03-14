@@ -118,19 +118,19 @@ function Doctors() {
                             </Link>
 
 
-                            <p className='text-center'>Performance</p>
+                            {/* <p className='text-center'>Performance</p> */}
 
                         </div>
 
                         <div className='spec-logo ms-3'>
 
-                            <Link to={'/stress'}>
+                            <Link to={'/ai'}>
 
                                 <img loading='lazy' src="/Erect_Well-01.jpg" className='img-fluid' alt="img" />
 
                             </Link>
 
-                            <p className='text-center'>Stress</p>
+                            {/* <p className='text-center'>Stress</p> */}
 
                         </div>
 
@@ -142,7 +142,7 @@ function Doctors() {
 
 
 
-                <div className="row  d-flex justify-content-center py-5 ">
+                <div className="row  d-flex justify-content-center py-3">
 
 
 
@@ -219,7 +219,7 @@ function Doctors() {
 
                                     <div class="card-header">
 
-                                        <img src={item.image} alt="Dr. Ajayan Varughes" class="doctor-image" />
+                                        <img src={item.image} alt="Dr. Ajayan Varughes" loading='lazy' class="doctor-image" />
                                         <div class="doctor-info">
                                             <h2>{item.name}</h2>
                                             <p>{item.specialization}</p>
@@ -240,11 +240,9 @@ function Doctors() {
                                     </div>
 
                                     <div class="card-footer">
-                                        <button class="talk-now-btn">Talk now</button>
+                                        <Link to={'/allproducts'} className='w-100'> <button class="talk-now-btn">Talk now</button></Link>
                                         <button class="view-profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View Profile</button>
                                     </div>
-
-
 
 
                                 </div>

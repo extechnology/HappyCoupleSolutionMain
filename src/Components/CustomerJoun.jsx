@@ -47,7 +47,7 @@ const CustomerJourney = () => {
                     </p>
                 </motion.div>
 
-                <div className="row g-4 justify-content-center position-relative">
+                <div className="row g-2 justify-content-center position-relative">
                     {/* Journey Line */}
                     <div
                         className="journey-line d-none d-md-block"
@@ -72,10 +72,6 @@ const CustomerJourney = () => {
                             transition={{
                                 duration: 0.5,
                                 delay: index * 0.2
-                            }}
-                            whileHover={{
-                                scale: 1.05,
-                                transition: { duration: 0.3 }
                             }}
                         >
                             <div
@@ -109,7 +105,7 @@ const CustomerJourney = () => {
 
                                 {/* Content */}
                                 <div className="card-body">
-                                    <h5 className="card-title fw-bold mb-3">
+                                    <h5 className="card-title fw-bold mb-3 text-dark">
                                         {step.title}
                                     </h5>
                                     <p className="card-text text-muted">

@@ -41,8 +41,6 @@ function SingleProducts() {
     })
 
 
-
-
     // Recommended Products
     const [RecPro, SetRecPro] = useState([])
 
@@ -312,9 +310,6 @@ function SingleProducts() {
 
         }
 
-
-
-
     }
 
 
@@ -428,18 +423,11 @@ function SingleProducts() {
 
                                             <button className='bg-transparent border-0 fw-bold' onClick={() => { SetDisStatus(!DisStatus) }}>Discription:</button>
 
-                                            {
-
-                                                DisStatus &&
-
                                                 <div>
 
                                                     <p style={{ textAlign: 'justify' }}>{Product.description}</p>
 
                                                 </div>
-
-                                            }
-
 
                                             <hr />
 
@@ -503,7 +491,7 @@ function SingleProducts() {
                                 <div className="row gx-4">
 
                                     {/* SPECS */}
-                                    <div className="col-lg-8 mb-4">
+                                    <div className="col-lg-12 mb-4">
 
                                         <div className='border rounded-2 shadow px-3 py-2 bg-white'>
 
@@ -750,7 +738,7 @@ function SingleProducts() {
 
 
                                     {/* Similar Products */}
-                                    <div className="col-lg-4">
+                                    {/* <div className="col-lg-4">
 
                                         <div className="px-0 rounded-2 shadow">
 
@@ -783,7 +771,7 @@ function SingleProducts() {
 
                                                     <div className='d-flex justify-content-center mb-5 mt-4'>
 
-                                                        <i class="fa-solid fa-plus fa-2xl"></i>
+                                                        <i class="fa-solid fa-plus fa-2xl text-dark"></i>
 
                                                     </div>
 
@@ -815,7 +803,11 @@ function SingleProducts() {
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
+
+
+
+
 
                                 </div>
                             </div>

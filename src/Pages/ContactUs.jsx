@@ -53,7 +53,7 @@ function ContactUs() {
 
                         <p>
 
-                            <a href="mailto:info@happycouplesolution.in.com" className='nav-link' target='_blank'><i class="fa-solid fa-envelope me-2"></i> info@happycouplesolution.in</a>
+                            <a href="mailto:info@happycouplesolution.in.com" className='nav-link' target='_blank'><i class="fa-solid fa-envelope me-2"></i> info@happycouplesolution.com</a>
 
 
                         </p>
@@ -62,7 +62,7 @@ function ContactUs() {
 
                         <p>
 
-                            <a href="" className='nav-link' target='_blank'><i class="fa-solid fa-earth-americas me-2"></i>www.happycouplesolution.in</a>
+                            <a href="https://happycouplesolution.com" className='nav-link' target='_blank'><i class="fa-solid fa-earth-americas me-2"></i>www.happycouplesolution.com</a>
 
                         </p>
 

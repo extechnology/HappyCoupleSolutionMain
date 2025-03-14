@@ -36,7 +36,7 @@ function Cart() {
 
             if (!sessionStorage.getItem("username")) {
 
-                Navigate('/auth',{ state: { from: location } })
+                Navigate('/auth', { state: { from: location } })
 
             }
 
@@ -63,7 +63,7 @@ function Cart() {
                     SetCartItems(CartProducts)
 
                     console.log(res.data);
-                    
+
 
 
                 } else {
@@ -141,7 +141,7 @@ function Cart() {
 
             const user = sessionStorage.getItem("username")
 
-            const res = await DeleteCart(data,user)
+            const res = await DeleteCart(data, user)
 
             if (res.status >= 200 && res.status <= 300) {
 
@@ -240,6 +240,7 @@ function Cart() {
 
                                                             <div className="me-5">
 
+                                                                {/* <p className='mb-0 italic fw-semibold'>Quanity</p> */}
                                                                 {/* 
                                                                 <select style={{ width: '100px' }} className="form-select me-4">
                                                                     <option>1</option>
@@ -248,12 +249,14 @@ function Cart() {
                                                                     <option>4</option>
                                                                 </select> */}
 
-                                                                <p>{item.quantity}</p>
+                                                                {/* <p>{item.quantity}</p> */}
 
                                                             </div>
 
 
                                                             <div className="">
+
+                                                                <p className='mb-0 italic fw-semibold'>Price</p>
 
                                                                 <text className="h6">₹{item.price}</text> <br />
 
@@ -324,7 +327,7 @@ function Cart() {
                         <div className="col-lg-3">
 
 
-                            <div className="card border-2 shadow" >
+                            <div className="card border-0 rounded shadow" >
 
                                 <div className="card-body bg-white">
 

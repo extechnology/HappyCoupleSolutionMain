@@ -150,6 +150,8 @@ function AllProducts() {
 
                         {/* All Products */}
 
+                        <h1 className='text-center text-bold'>Our Treatment Plans</h1>
+
 
                         {
 

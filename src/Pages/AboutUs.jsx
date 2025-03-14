@@ -117,10 +117,10 @@ function AboutUs() {
             for individuals seeking a natural approach to improved well-being
             and connection.
           </p>
-          <h4>Counseling Services</h4>
+          <h4>Counselling Services</h4>
 
           <p>
-            Happy Couple Solutions offers personalized counseling services
+            Happy Couple Solutions offers personalized Counselling Services
             focused on wellness, stress management, and relationship
             satisfaction. Our holistic approach includes tailored treatment
             plans, therapy, and education to foster deeper emotional bonds and

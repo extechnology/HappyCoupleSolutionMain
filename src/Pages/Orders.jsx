@@ -45,7 +45,7 @@ function Orders() {
 
                 setTimeout(() => {
 
-                    Navigate('/auth',{ state: { from: location } })
+                    Navigate('/auth', { state: { from: location } })
 
                 }, 1000)
 
@@ -188,9 +188,9 @@ function Orders() {
 
                                                 <Card.Text className='text-dark'>
 
-                                                    <p className='fw-bold mb-0'>₹{item.total_price}</p>
+                                                    <p className='fw-bold mb-0'>₹{item?.total_price}</p>
 
-                                                    <p className='small'>Cash on Delivery(COD)</p>
+                                                    <p className='small fw-bold'>{item?.payment_type}</p>
                                                 </Card.Text>
 
                                             </Card.Body>
@@ -204,13 +204,13 @@ function Orders() {
 
                                                 <h5 className='text-dark fw-bold h6'>Delivery Address</h5>
 
-                                                <h6 className='fw-bold small text-dark mb-1'>{item.name}</h6>
+                                                <h6 className='fw-bold small text-dark mb-1'>{item?.name}</h6>
 
                                                 <Card.Text className='text-dark'>
 
-                                                    <p className='small mb-1'>{item.address}</p>
+                                                    <p className='small mb-1'>{item?.address}</p>
 
-                                                    <h6 className='small'> <span className='fw-bold'>Phone:</span> {item.phone}</h6>
+                                                    <h6 className='small'> <span className='fw-bold'>Phone:</span> {item?.phone}</h6>
 
                                                 </Card.Text>
 
@@ -220,42 +220,30 @@ function Orders() {
 
                                         </Col>
 
-
                                     </Row>
 
 
                                     <Row>
 
-
                                         <Col md={6}>
 
                                             <p className='mt-3 px-3 py-2 me-3 mb-0 text-dark' style={{ width: 'fit-content' }}> <span className='fw-bold'>Order Status : </span> <span className={item.order_status === "cancelled" ? "fw-bold text-danger" : item.order_status === "delivered" ? "fw-bold text-success" : "fw-bold"}>{item.order_status}</span></p>
+
+                                            <p className='px-3 me-3 mb-0 text-dark small'>To Cancel Order</p>
+
 
                                         </Col>
 
                                         <Col md={6} className='d-flex justify-content-end'>
 
-                                            {
 
-                                                item.order_status === "cancelled" || item.order_status === "delivered" ?
-
-                                                    <button className='btn btn-success mt-3 px-3 py-2 fw-bold' onClick={() => { Navigate(`/pro/${item.product_id}`) }} style={{ width: 'fit-content' }}>Buy Again</button>
-
-                                                    :
-
-                                                    <button className='btn btn-danger mt-3 px-3 py-2 fw-bold' onClick={() => { CancelOrder(item.id) }} style={{ width: 'fit-content' }}>Cancel Order</button>
-
-                                            }
-
+                                            <button className='btn btn-success mt-3 px-3 py-2 fw-bold' onClick={() => { Navigate(`/pro/${item.product_id}`) }} style={{ width: 'fit-content' }}>Buy Again</button>
 
 
                                         </Col>
 
 
-
                                     </Row>
-
-
 
 
                                 </Card>
