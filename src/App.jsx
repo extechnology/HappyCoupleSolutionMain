@@ -14,7 +14,6 @@ const Cart = lazy(() => import('./Pages/Cart'))
 const SingleProducts = lazy(() => import('./Pages/SingleProducts'))
 const AboutUs = lazy(() => import('./Pages/AboutUs'))
 const ContactUs = lazy(() => import('./Pages/ContactUs'))
-const Stress = lazy(() => import('./Pages/Stress'))
 const PrivacyPolicy = lazy(() => import('./Pages/PrivacyPolicy'))
 const Terms = lazy(() => import('./Pages/Terms'))
 const Refund = lazy(() => import('./Pages/Refund'))
@@ -106,10 +105,6 @@ function App() {
           <Route path="/about" element={<AboutUs />}> </Route>
 
           <Route path="/contact" element={<ContactUs />}> </Route>
-
-          <Route path="/stress" element={<Stress />}> </Route>
-
-          <Route path="/performance" element={<Stress />}> </Route>
 
           <Route path="/pirvacyPolicy" element={<PrivacyPolicy />}> </Route>
 

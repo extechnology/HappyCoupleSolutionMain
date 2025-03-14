@@ -93,7 +93,7 @@ function Header() {
               <Link to={'/doctors'} onClick={handleNavClick}>Talk to Doctor</Link>
 
 
-              <div className='dropdown'>
+              {/* <div className='dropdown'>
 
                 <Nav.Link href="#link" >Your Concern <i class="fa-solid fa-caret-down" style={{ color: '#ccc' }}></i></Nav.Link>
 
@@ -105,7 +105,7 @@ function Header() {
 
                 </div>
 
-              </div>
+              </div> */}
 
 
               <Link to={'/allproducts'} onClick={handleNavClick}>Treatment Plans</Link>

@@ -41,8 +41,6 @@ function SingleProducts() {
     })
 
 
-
-
     // Recommended Products
     const [RecPro, SetRecPro] = useState([])
 
@@ -312,9 +310,6 @@ function SingleProducts() {
 
         }
 
-
-
-
     }
 
 
@@ -399,8 +394,8 @@ function SingleProducts() {
                                                 </div>
 
 
-                                                <span className="text-muted"><i className="fas fa-shopping-basket fa-sm mx-1"></i>{PriceandQuanity.stock}</span>
-                                                <span className="text-success ms-2">In stock</span>
+                                                {/* <span className="text-muted"><i className="fas fa-shopping-basket fa-sm mx-1"></i>{PriceandQuanity.stock}</span> */}
+                                                {/* <span className="text-success ms-2">In stock</span> */}
 
 
                                             </div>
@@ -409,8 +404,8 @@ function SingleProducts() {
                                             {/* Price */}
                                             <div className="mb-3">
 
-                                                <span className="h5">₹{PriceandQuanity.price}</span>
-                                                <span className="text-muted">/per box</span>
+                                                <span className="h5">₹ {PriceandQuanity.price}</span>
+                                                {/* <span className="text-muted">/per box</span> */}
 
                                             </div>
 
@@ -428,18 +423,11 @@ function SingleProducts() {
 
                                             <button className='bg-transparent border-0 fw-bold' onClick={() => { SetDisStatus(!DisStatus) }}>Discription:</button>
 
-                                            {
-
-                                                DisStatus &&
-
                                                 <div>
 
                                                     <p style={{ textAlign: 'justify' }}>{Product.description}</p>
 
                                                 </div>
-
-                                            }
-
 
                                             <hr />
 
@@ -503,7 +491,7 @@ function SingleProducts() {
                                 <div className="row gx-4">
 
                                     {/* SPECS */}
-                                    <div className="col-lg-8 mb-4">
+                                    <div className="col-lg-12 mb-4">
 
                                         <div className='border rounded-2 shadow px-3 py-2 bg-white'>
 
@@ -750,7 +738,7 @@ function SingleProducts() {
 
 
                                     {/* Similar Products */}
-                                    <div className="col-lg-4">
+                                    {/* <div className="col-lg-4">
 
                                         <div className="px-0 rounded-2 shadow">
 
@@ -783,7 +771,7 @@ function SingleProducts() {
 
                                                     <div className='d-flex justify-content-center mb-5 mt-4'>
 
-                                                        <i class="fa-solid fa-plus fa-2xl"></i>
+                                                        <i class="fa-solid fa-plus fa-2xl text-dark"></i>
 
                                                     </div>
 
@@ -815,7 +803,11 @@ function SingleProducts() {
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
+
+
+
+
 
                                 </div>
                             </div>

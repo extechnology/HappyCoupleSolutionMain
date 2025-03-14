@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'sonner'
 import './Buy.css'
-import { PostAddress, GetAddress, PostOrder } from '../Services/AllApi'
+import { PostAddress, GetAddress, PostOrder, MakePayment } from '../Services/AllApi'
 import { AddBuyNow } from '../Redux/BuySlice'
 
 
@@ -16,6 +16,7 @@ function Buy() {
     const Dispatch = useDispatch()
 
     const location = useLocation()
+
 
     // GetAddress State
     const [GetState, SetGetState] = useState({})
@@ -69,7 +70,7 @@ function Buy() {
 
                 setTimeout(() => {
 
-                    Navigate('/auth',{ state: { from: location } })
+                    Navigate('/auth', { state: { from: location } })
 
                 }, 1000)
 
@@ -237,60 +238,46 @@ function Buy() {
 
 
 
-
-
-
-
-
-    // Order
-    const Order = async () => {
-
+    // Payment
+    const handlePhonePePayment = async () => {
 
         try {
-
 
             if (BuyDeatils.length > 0 && SelectedAddress) {
 
 
-
-
                 const formdata = new FormData()
+
 
                 const reqheader = {
 
                     "Content-Type": "multipart/form-data"
+                };
 
-                }
 
                 formdata.append("user", sessionStorage.getItem("username"))
                 formdata.append("address", SelectedAddress.id)
+                formdata.append("payment_type", "Online Payment")
                 formdata.append("order_items", JSON.stringify(BuyDeatils))
-
-                const Response = await PostOrder(formdata, reqheader)
-
-                if (Response.status >= 200 && Response.status <= 300) {
-
-                    Navigate('/success')
+                formdata.append("amount", BuyDeatils?.reduce((total, item) => total + Number(item.price), 0))
 
 
+                const response = await MakePayment(formdata, reqheader)
 
-                }
-                else {
 
-                    console.log(Response)
-                    toast.error("Error Please Try Again Later...!")
+                if (response.status >= 200 && response.status <= 300) {
+                    
+                    window.location.href = response?.data?.payment_data?.payment_url;
 
-                    setTimeout(() => {
+                } else {
 
-                        Navigate('/')
-
-                    }, 1000);
-
+                    console.log(response)
+                    toast.error("Something went wrong")
 
                 }
+
 
             } else {
-
 
 
                 if (!SelectedAddress) {
@@ -304,20 +291,90 @@ function Buy() {
 
                 }
 
-
-
             }
 
+
+        } catch (error) {
+            console.error("Payment Error:", error);
+            toast.error("Something went wrong");
         }
-        catch (err) {
-
-            console.log(err);
-
-
-        }
-
 
     }
+
+
+    // // Order
+    // const Order = async () => {
+
+    //     try {
+
+
+    //         if (BuyDeatils.length > 0 && SelectedAddress) {
+
+
+    //             const formdata = new FormData()
+
+
+
+    //             const reqheader = {
+
+    //                 "Content-Type": "multipart/form-data"
+
+    //             };
+
+    //             formdata.append("user", sessionStorage.getItem("username"))
+    //             formdata.append("address", SelectedAddress.id)
+    //             formdata.append("order_items", JSON.stringify(BuyDeatils))
+    //             formdata.append("payment_type", "Cash On Delivery")
+
+    //             const Response = await PostOrder(formdata, reqheader)
+
+    //             if (Response.status >= 200 && Response.status <= 300) {
+
+    //                 Navigate('/success')
+
+
+
+    //             }
+    //             else {
+
+    //                 console.log(Response)
+    //                 toast.error("Error Please Try Again Later...!")
+
+    //                 setTimeout(() => {
+
+    //                     Navigate('/')
+
+    //                 }, 1000);
+
+
+    //             }
+
+    //         } else {
+
+
+    //             if (!SelectedAddress) {
+
+    //                 toast.warning("Please Add An Address For Devlivery..!")
+
+    //             } else {
+
+    //                 toast.warning("No Products Found...!")
+    //                 Navigate('/')
+
+    //             }
+
+    //         }
+
+    //     }
+    //     catch (err) {
+
+    //         console.log(err);
+
+
+    //     }
+
+
+    // }
 
 
 
@@ -400,33 +457,51 @@ function Buy() {
                                         <h3 className='h4 order-head text-dark'>PAYMENT OPTION💰</h3>
 
 
-                                        <div class="payment-option">
-                                            <label class="option-card">
-                                                <input type="radio" name="payment" checked value="cod" class="radio-input" />
-                                                <div class="option-content">
-                                                    <span class="option-icon">💵</span>
-                                                    <span class="option-text">Cash on Delivery</span>
-                                                </div>
-                                            </label>
+                                        <div className='flex flex-row'>
 
+                                            {/* <div class="payment-option">
+                                                <label class="option-card" style={{
+                                                    border: selectedPayment === "cod" ? "2px solid #4CAF50" : "none",
+                                                    padding: selectedPayment === "cod" ? "10px" : "8px",
+                                                    display: "flex",
+                                                    alignItems: "center", 
+                                                    justifyContent: "center" 
+                                                }}>
+                                                    <input type="radio" name="payment" checked={selectedPayment === "cod"} onChange={() => setSelectedPayment("cod")} value="cod" class="radio-input" />
+                                                    <div class="option-content">
+                                                        <span class="option-icon">💵</span>
+                                                        <span class="option-text">Cash on Delivery</span>
+                                                    </div>
+                                                </label>
+                                            </div> */}
+
+                                            <div class="payment-option">
+                                                <label class="option-card" style={{
+                                                    border: "2px solid #4CAF50",
+                                                    padding: "10px",
+                                                    display: "flex",
+                                                    alignItems: "center", 
+                                                    justifyContent: "center" 
+                                                }}>
+                                                    <input type="radio" name="payment"  checked value="online" class="radio-input" />
+                                                    <div class="option-content">
+                                                        <span class="option-icon">💵</span>
+                                                        <span class="option-text">Online Payment</span>
+                                                    </div>
+                                                </label>
+                                            </div>
 
                                         </div>
 
-                                        <p className=' mt-3 payment-p'>Currently, only Cash on Delivery (COD) is available for this order due to limited payment options in your area.Ensure you have the exact amount ready at the time of delivery* </p>
-
+                                        <p className=' mt-3 payment-p'>*Currently, you can choose between Cash on Delivery (COD) and online payment for this order. Please ensure you have the exact amount ready if selecting COD* </p>
 
                                     </div>
-
-
-
-
 
 
                                     <div className="float-end">
                                         <button className="btn btn-light border me-3" onClick={() => { Navigate('/') }}>Cancel</button>
-                                        <button className="btn btn-success shadow-0 border" onClick={Order}>Order</button>
+                                        <button className="btn btn-success shadow-0 border" onClick={handlePhonePePayment} >Pay & Order</button>
                                     </div>
-
 
                                 </div>
 

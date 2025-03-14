@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const HappyCoupleSolutions = () => {
     const solutions = [
@@ -32,41 +33,35 @@ const HappyCoupleSolutions = () => {
 
     return (
         <div className="">
+
             {/* Hero Section */}
             <Container className="py-5">
+
                 <Row className="align-items-center g-4">
-                    <Col md={6} className="order-md-1 order-2">
+
+                    <Col md={12} className="order-md-1 order-2">
                         <div className="mb-4 pe-md-4">
-                            <h1 className="display-4 fw-bold text-dark mb-3 animate__animated animate__fadeInLeft">
+                            <h1 className="display-4 fw-bold text-dark mb-3 animate__animated animate__fadeInLeft text-center">
                                 Happy Couple Solutions
                             </h1>
-                            <p className="lead text-muted mb-4 animate__animated animate__fadeInLeft animate__delay-1s">
+                            <p className="lead text-muted mb-4 animate__animated animate__fadeInLeft animate__delay-1s text-center">
                                 Your Partner in Confidence, Wellness & Deeper Connections
                             </p>
-                            <p className="text-dark mb-4 animate__animated animate__fadeInLeft animate__delay-2s">
+                            <p className="text-dark mb-4 animate__animated animate__fadeInLeft animate__delay-2s text-center">
                                 At Happy Couple Solutions, we help you reclaim confidence, intimacy,
                                 and relationship harmony with scientifically-backed treatment plans
                                 and expert guidance.
                             </p>
-                          
+
                         </div>
                     </Col>
-                    <Col md={6} className="order-md-2 order-1">
-                        <div className="position-relative">
-                            <img
-                                src="/Happy Couple LOGO.svg"
-                                alt="Couple Wellness"
-                                loading='lazy'
-                                className="img-fluid rounded-4"
-                            />
-                           
-                        </div>
-                    </Col>
+
                 </Row>
             </Container>
 
             {/* Approach Section */}
             <Container className="py-5 bg-white">
+
                 <Row className="text-center mb-5">
                     <Col>
                         <h2 className="display-6 fw-bold mb-3 text-dark">Our Approach Helps You</h2>
@@ -75,6 +70,7 @@ const HappyCoupleSolutions = () => {
                         </p>
                     </Col>
                 </Row>
+
                 <Row className="g-4">
                     {[
                         {
@@ -97,7 +93,7 @@ const HappyCoupleSolutions = () => {
                         }
                     ].map((approach, idx) => (
                         <Col md={4} key={idx}>
-                            <Card className="h-100 border-0 shadow-sm hover-lift">
+                            <Card className="h-100 border-0 shadow-sm">
                                 <Card.Body className="text-center p-4">
                                     <div
                                         className={`rounded-circle bg-${approach.color} text-white d-flex align-items-center justify-content-center mb-3 mx-auto`}
@@ -129,7 +125,7 @@ const HappyCoupleSolutions = () => {
                 <Row className="g-4">
                     {solutions.map((solution, idx) => (
                         <Col md={3} sm={6} key={idx}>
-                            <Card className="h-100 border-0 shadow-sm hover-lift">
+                            <Card className="h-100 border-0 shadow-sm">
                                 <Card.Body className="text-center p-4">
                                     <div
                                         className={`rounded-circle bg-${solution.color} text-white d-flex align-items-center justify-content-center mb-3 mx-auto`}
@@ -158,13 +154,17 @@ const HappyCoupleSolutions = () => {
                                 With safe, proven, and easy-to-follow treatment plans, we empower
                                 individuals and couples to regain passion and connection.
                             </p>
-                            <Button
-                                variant="light"
-                                size="lg"
-                                className="px-5 py-2 rounded-pill shadow-lg text-primary"
-                            >
-                                Begin Your Journey
-                            </Button>
+
+                            <Link to={'/doctors'}>
+                                <Button
+                                    variant="light"
+                                    size="lg"
+                                    className="px-5 py-2 rounded-pill shadow-lg text-primary"
+                                >
+                                    Begin Your Journey
+                                </Button>
+                            </Link>
+                            
                         </Col>
                     </Row>
                 </Container>

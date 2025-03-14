@@ -12,7 +12,6 @@ export const GetAllProducts = async () => {
 }
 
 
-
 // Product Quantity
 export const ProductQuantity = async () => {
 
@@ -104,6 +103,15 @@ export const DeleteCart = async (data, user) => {
 export const GetDoctor = async () => {
 
     return CommonApi("GET", `${base_url}/doc_info/`, "", "")
+
+}
+
+
+
+// Payment Gateway
+export const MakePayment = async (data, header) => {
+
+    return CommonApi("POST", `${base_url}/initiate-payment/`, data, header)
 
 }
 

@@ -46,15 +46,15 @@ function Footer() {
 
                 </p>
 
-                <p className='mb-2'>
+                {/* <p className='mb-2'>
 
                   <Link to={'/performance'} className='text-reset foot-link'>Your Concern</Link>
 
-                </p>
+                </p> */}
 
                 <p className='mb-2'>
 
-                  <Link to={'/allproducts'} className='text-reset foot-link'>Your Products</Link>
+                  <Link to={'/allproducts'} className='text-reset foot-link'>Treatment Plans</Link>
 
                 </p>
 
