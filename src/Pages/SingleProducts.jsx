@@ -394,8 +394,8 @@ function SingleProducts() {
                                                 </div>
 
 
-                                                <span className="text-muted"><i className="fas fa-shopping-basket fa-sm mx-1"></i>{PriceandQuanity.stock}</span>
-                                                <span className="text-success ms-2">In stock</span>
+                                                {/* <span className="text-muted"><i className="fas fa-shopping-basket fa-sm mx-1"></i>{PriceandQuanity.stock}</span> */}
+                                                {/* <span className="text-success ms-2">In stock</span> */}
 
 
                                             </div>
@@ -404,8 +404,8 @@ function SingleProducts() {
                                             {/* Price */}
                                             <div className="mb-3">
 
-                                                <span className="h5">₹{PriceandQuanity.price}</span>
-                                                <span className="text-muted">/per box</span>
+                                                <span className="h5">₹ {PriceandQuanity.price}</span>
+                                                {/* <span className="text-muted">/per box</span> */}
 
                                             </div>
 
