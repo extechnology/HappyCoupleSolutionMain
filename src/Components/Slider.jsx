@@ -127,7 +127,7 @@ function Slider() {
 
                             <div className='col-md-6 Slide-hover' style={{ marginTop: '1.3rem' }} >
 
-                                <Link className='nav-link' to={'/doctors'}>
+                                <Link className='nav-link' to={'/allproducts'}>
 
                                     <img src="/li-3.jpeg" loading='lazy' className='img-fluid' alt="" />
 
@@ -145,7 +145,7 @@ function Slider() {
 
                             <div className='col-md-6 Slide-hover' style={{ marginTop: '1.3rem' }}>
 
-                                <Link className='nav-link' to={'/stress'}>
+                                <Link className='nav-link' to={'/allproducts'}>
 
                                     <img src="/li-4.jpeg" loading='lazy' className='img-fluid' alt="" />
 

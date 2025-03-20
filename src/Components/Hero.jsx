@@ -32,7 +32,7 @@ function Hero() {
 
                         <div className='col-md-6 card-display'>
 
-                            <Link to={'/doctors'} className='nav-link'>
+                            <a href='https://wa.me/+919072377100?text=Hi' target='_blank' className='nav-link'>
 
                                 <Card style={{ width: '18rem' }} className='shadow'>
 
@@ -40,18 +40,14 @@ function Hero() {
 
                                     <Card.Body className='card-color'>
 
-
-
                                         <Card.Title>Now You Can Talk With Doctor <i class="fa-solid fa-circle-arrow-right"></i></Card.Title>
-
-
 
 
                                     </Card.Body>
 
                                 </Card>
 
-                            </Link>
+                            </a>
 
 
                         </div>

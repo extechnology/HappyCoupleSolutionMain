@@ -1116,7 +1116,7 @@ iframe {
 }
 
 
-.card-body{
+.card-body {
 
 
   background-color: #fff !important;
@@ -1126,9 +1126,86 @@ iframe {
 
 /* order */
 .order-image {
-  width: 80%; /* Adjust the width percentage as needed */
-  max-width: 200px; /* Set a maximum width for larger screens */
-  height: auto; /* Maintain aspect ratio */
+  width: 80%;
+  /* Adjust the width percentage as needed */
+  max-width: 200px;
+  /* Set a maximum width for larger screens */
+  height: auto;
+  /* Maintain aspect ratio */
 }
 
 
+/* Enquire modal */
+/* EnquireModal.css */
+.enquire-modal .modal-content {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.enquire-modal .modal-header {
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.enquire-modal .modal-title {
+  background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.enquire-modal .close {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.enquire-modal .close:hover {
+  opacity: 1;
+}
+
+.contact-btn {
+  min-width: 150px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+}
+
+.btn-primary {
+  background-color: #0088cc;
+  border-color: #0088cc;
+}
+
+.phone-display {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* For animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-open .modal-content {
+  animation: fadeIn 0.4s ease-out forwards;
+}

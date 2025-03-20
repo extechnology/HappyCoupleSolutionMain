@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { GetDoctor } from '../Services/AllApi';
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
+import EnquireModal from '../Components/EnquireModal';
+import ProfileModal from '../Components/ViewProfileModal';
 
 function Doctors() {
 
@@ -19,6 +21,11 @@ function Doctors() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
+    // Enquire Modal
+    const [ShowEnquire, setShowEnquire] = useState(false);
+    const handleCloseEnquire = () => setShowEnquire(false);
+    const handleShowEnquire = () => setShowEnquire(true);
 
 
     useEffect(() => {
@@ -78,7 +85,7 @@ function Doctors() {
 
 
 
-    
+
 
     return (
 
@@ -153,7 +160,7 @@ function Doctors() {
                         DocData.map((item) => (
 
 
-                            <main  class="mb-5 d-flex flex-column justify-content-center align-items-center">
+                            <main class="mb-5 d-flex flex-column justify-content-center align-items-center">
 
                                 {/* <div className="">
 
@@ -223,7 +230,7 @@ function Doctors() {
                                         <div class="doctor-info">
                                             <h2>{item.name}</h2>
                                             <p>{item.specialization}</p>
-                                            
+
                                         </div>
                                         <div class="status">
                                             <span class="online-status">Online</span>
@@ -235,22 +242,25 @@ function Doctors() {
                                         <div class="details">
                                             <p><strong>{item.experience}</strong></p>
                                             {/* <p><strong>999 consultations</strong></p> */}
-                                            <p>Can speak in English, हिंदी, தமிழ், മലയാളം</p>
+                                            <p>Can speak in {item?.languages}</p>
                                         </div>
                                     </div>
 
                                     <div class="card-footer">
-                                        <Link to={'/allproducts'} className='w-100'> <button class="talk-now-btn">Talk now</button></Link>
-                                        <button class="view-profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">View Profile</button>
+                                        <button class="talk-now-btn" onClick={() => { handleShowEnquire() }}>Talk now</button>
+                                        <button class="view-profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" onClick={() => { handlemodal(item) }}>View Profile</button>
                                     </div>
 
 
                                 </div>
 
 
+                                {/* Enquire Modal */}
+                                <EnquireModal show={ShowEnquire} handleClose={handleCloseEnquire} phoneNumber={item?.phonenumber} />
 
 
-
+                                {/* Profile Modal */}
+                                <ProfileModal show={show} handleClose={handleClose} ModalData={ModalData} />
                             </main>
 
 
@@ -267,42 +277,9 @@ function Doctors() {
 
 
 
-            <Modal
-                show={show}
-                onHide={handleClose}
-                backdrop="static"
-                keyboard={false}
-                centered={true}
-                
-            >
 
 
 
-                <Modal.Header closeButton>
-
-
-                </Modal.Header>
-
-
-                <Modal.Body>
-
-
-                    <h3>{ModalData.name}</h3>
-
-                    <p style={{ fontSize: '15px', textAlign: 'justify' }}>{ModalData.specialization}</p>
-
-                </Modal.Body>
-
-
-                <Modal.Footer>
-
-                    <button className='btn btn-closed' onClick={handleClose}>Close</button>
-
-
-                </Modal.Footer>
-
-
-            </Modal>
 
 
         </>

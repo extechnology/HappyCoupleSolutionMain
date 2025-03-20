@@ -139,7 +139,7 @@ function AllProducts() {
             <section className=''>
 
 
-                <CustomerJourney />
+
 
                 <div className='container p-5'>
 
@@ -266,6 +266,9 @@ function AllProducts() {
                     </div>
 
                 </div>
+
+                {/* Customer Journey */}
+                <CustomerJourney />
 
             </section>
 
