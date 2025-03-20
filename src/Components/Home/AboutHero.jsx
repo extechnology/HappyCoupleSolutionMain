@@ -35,7 +35,7 @@ const HappyCoupleSolutions = () => {
         <div className="">
 
             {/* Hero Section */}
-            <Container className="py-5">
+            <Container className="py-3 pt-5">
 
                 <Row className="align-items-center g-4">
 
@@ -60,7 +60,7 @@ const HappyCoupleSolutions = () => {
             </Container>
 
             {/* Approach Section */}
-            <Container className="py-5 bg-white">
+            <Container className="py-3 bg-white">
 
                 <Row className="text-center mb-5">
                     <Col>

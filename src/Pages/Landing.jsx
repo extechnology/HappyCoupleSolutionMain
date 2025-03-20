@@ -40,14 +40,6 @@ function Landing() {
         </div>
 
 
-        {/* About */}
-        <div>
-
-          <HappyCoupleSolutions />
-
-        </div>
-
-
         {/* Hero  */}
         <div className=''>
 
@@ -68,7 +60,12 @@ function Landing() {
         </div>
 
 
+        {/* About */}
+        <div>
 
+          <HappyCoupleSolutions />
+
+        </div>
 
         {/* Hero 2 */}
         {/* <div className=''>
